@@ -1,5 +1,3 @@
-https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
-
 docker build -t itsrohitnaik/node .
 
 docker images
