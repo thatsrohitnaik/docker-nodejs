@@ -2,11 +2,9 @@ docker build -t itsrohitnaik/node .
 
 docker images
 
-docker run -p 49160:9090 -d itsrohitnaik/node
-docker run -p 49160:8080 -d <your username>/node-web-app
+docker run -p 9090:3001 -d itsrohitnaik/abc
 
-
-docker run -it --entrypoint /bin/bash itsrohitnaik/abc -s
+http://0.0.0.0:9090/
 
 docker ps
 
