@@ -9,7 +9,8 @@ COPY package*.json ./
 RUN npm install
 # this will install all dependecies 
 COPY . .
-# Bundle app source
+# Bundle app source 
+# Copy everything from your project to image
 EXPOSE 3001
 # exposes port 3001 
 CMD [ "node", "index.js" ]
