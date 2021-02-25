@@ -25,7 +25,7 @@ docker build -t itsrohitnaik/node .
 docker images
 # once the build is done docker image is created this command will list all the images for you
 docker run -p 3001:3001 -d itsrohitnaik/nodejsHelloWorld
-# above command will run docker image and link port 9090 with the exposed port 3001 in the docker image
+# above command will run docker image and link port 3001 with the exposed port 3001 in the docker image
 # http://0.0.0.0:3001/
 
 docker ps
@@ -45,7 +45,11 @@ cat keys.json | docker login -u _json_key --password-stdin https://gcr.io
 # give access to docker app
 docker login -u _json_key -p "$(cat keys.json)" https://gcr.io
 # repo 
-docker tag imagename gcr.io/project-id/imagename
+docker tag nodejs gcr.io/repoproject-305012/nodejs
+
+docker tag itsrohitnaik/nodejs-hello-world-app gcr.io/repoproject-305012/itsrohitnaik/nodejs-hello-world-app
+
+
 
 # Kubernetes deployment via command line 
 # Creating deployment and exposing services
@@ -61,6 +65,13 @@ kubectl expose deployment hello-minikube --type=NodePort --port=8080
 # You can find the video link to Push on GCP in below section
 # Uploading on Docker Hub is simple, all you need to do is login via Dokcer Dashboard App onto your DockerHub account and Push.
 
+# gcp authenticate 
+cat keys.json | docker login -u _json_key --password-stdin https://gcr.io
+# give access to docker app
+docker login -u _json_key -p "$(cat keys.json)" https://gcr.io
+# repo 
+docker tag imagename gcr.io/project-id/imagename
+docker push  gcr.io/project-id/itsrohitnaik/imagename
 
 # Setp 2 
 # Create Kubernetes Cluster on GCP 
