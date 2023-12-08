@@ -3,6 +3,7 @@ kubectl get deployment
 kubectl get pod
 kubectl get replicaset
 kubectl edit deployment nodejsdeployment
+kubectl apply -f config.yml
 kubectl logs nodejsdeployment-7488fc879c-bq9p8
 kubectl exec -it nodejsdeployment-7488fc879c-bq9p8 -- /bin/bash
 kubectl delete deployment nodejsdeployment
