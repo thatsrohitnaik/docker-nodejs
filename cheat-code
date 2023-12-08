@@ -13,4 +13,6 @@ deployment       -- root
 pod        child 1     child 2
           container    container
 
+to change pod we change replicaset
+
 node -- number of vm
