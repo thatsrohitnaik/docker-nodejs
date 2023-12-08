@@ -1,0 +1,7 @@
+kubectl create deployment nodejsdeployment --image=itsrohitnaik/nodejs-hello-world-app
+kubectl get deployment
+kubectl get pod
+kubectl get replicaset
+kubectl edit deployment nodejsdeployment
+kubectl logs nodejsdeployment-7488fc879c-bq9p8
+kubectl exec -it nodejsdeployment-7488fc879c-bq9p8 -- /bin/bash
