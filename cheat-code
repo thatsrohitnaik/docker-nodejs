@@ -8,3 +8,9 @@ kubectl exec -it nodejsdeployment-7488fc879c-bq9p8 -- /bin/bash
 kubectl delete deployment nodejsdeployment
 
 kubctl [action] [action upon]
+
+deployment       -- root
+pod        child 1     child 2
+          container    container
+
+node -- number of vm
