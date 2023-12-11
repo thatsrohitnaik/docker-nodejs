@@ -7,6 +7,7 @@ kubectl apply -f config.yml
 kubectl logs nodejsdeployment-7488fc879c-bq9p8
 kubectl exec -it nodejsdeployment-7488fc879c-bq9p8 -- /bin/bash
 kubectl delete deployment nodejsdeployment
+kubectl expose deployment nodejsdeployment --port=8765 --target-port=9376 \ --name=nodejsdeployment-service --type=LoadBalancer
 
 kubctl [action] [action upon]
 
@@ -17,3 +18,8 @@ pod        child 1     child 2
 to change pod we change replicaset
 
 node -- number of vm
+
+
+--- docker 
+
+docker run itsrohitnaik/nodejs-hello-world-app
